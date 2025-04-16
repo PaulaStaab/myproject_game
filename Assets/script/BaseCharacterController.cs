@@ -21,8 +21,13 @@ public class BaseCharacterController : MonoBehaviour
   }
   
   // This is a update 
-    private void Update()
+    private void FixedUpdate()
     {
-        transform.position += new Vector3(movementInput.x /*X axis of Input*/, movementInput.y, 0) * Time.deltaTime * movementSpeed;
+        transform.Translate(new Vector3(movementInput.x, movementInput.y, 0) * Time.deltaTime * movementSpeed);
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Collision detetected with " + collision.gameObject.name);
     }
 }
