@@ -15,12 +15,13 @@ public class VolumeManager : MonoBehaviour
     public void SetAmbienteVolume(float volume)
     {
         an.SetFloat("AmbienteVolume", volume);
-    } 
-    
+    }
+
     public void SetMasterVolume(float volume)
     {
         an.SetFloat("MasterVolume", volume);
     }
+}
     
 
 
